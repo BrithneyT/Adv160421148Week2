@@ -19,57 +19,31 @@
             android:layout_marginStart="51dp"
             android:layout_marginTop="160dp"
             android:layout_marginEnd="51dp"
-            app:layout_constraintBottom_toTopOf="@+id/btnSubmit"
+            app:layout_constraintBottom_toTopOf="@+id/btnStart"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txtAnswer"
+                android:id="@+id/txtName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Your Answer"
+                android:hint="Player Name"
                 app:layout_constraintEnd_toEndOf="parent" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/btnSubmit"
-            android:layout_width="335dp"
-            android:layout_height="44dp"
-            android:layout_marginStart="43dp"
-            android:layout_marginEnd="33dp"
+            android:id="@+id/btnStart"
+            android:layout_width="101dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="267dp"
+            android:layout_marginEnd="43dp"
             android:layout_marginBottom="465dp"
-            android:text="Submit Answer"
+            android:text="Start"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
-
-        <TextView
-            android:id="@+id/txtTurn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="165dp"
-            android:layout_marginTop="74dp"
-            android:layout_marginEnd="165dp"
-            android:text="Player's Turn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/txtQuestion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="149dp"
-            android:layout_marginTop="14dp"
-            android:layout_marginEnd="149dp"
-            android:text="18 + 12"
-            android:textSize="34sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtTurn" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

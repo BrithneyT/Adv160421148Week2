@@ -28,30 +28,17 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        generateQuestion()
-
-        binding.btnSubmit.setOnClickListener {
-            val playerAnswer = binding.txtAnswer.text.toString().toIntOrNull()
-            if (playerAnswer == correctAnswer) {
-                score++
-                generateQuestion()
-                binding.txtAnswer.text?.clear()
-            } else {
-                val action = MainFragmentDirections.actionResultFragment(score)
-                Navigation.findNavController(it).navigate(action)
-            }
+        binding.btnStart.setOnClickListener {
+            val playerName = binding.txtName.text.toString()
+            val action = MainFragmentDirections.actionCalculatorFragment(playerName)
+            Navigation.findNavController(it).navigate(action)
         }
-//        binding.btnStart.setOnClickListener {
-//            val playerName = binding.txtName.text.toString()
-//            val action = MainFragmentDirections.actionGameFragment(playerName)
-//            Navigation.findNavController(it).navigate(action)
-//        }
     }
-    private fun generateQuestion() {
-        val number1 = (0..100).random()
-        val number2 = (0..100).random()
-        correctAnswer = number1 + number2
-        binding.txtQuestion.text = "$number1 + $number2 = ?"
-    }
+//    private fun generateQuestion() {
+//        val number1 = (0..100).random()
+//        val number2 = (0..100).random()
+//        correctAnswer = number1 + number2
+//        binding.txtQuestion.text = "$number1 + $number2 = ?"
+//    }
 
 }

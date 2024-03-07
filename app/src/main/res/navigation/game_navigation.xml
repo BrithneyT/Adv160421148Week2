@@ -11,9 +11,8 @@
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
-            android:id="@+id/actionResultFragment"
-            app:destination="@id/resultFragment"
-            app:enterAnim="@android:anim/slide_out_right" />
+            android:id="@+id/actionCalculatorFragment"
+            app:destination="@id/calculatorFragment" />
     </fragment>
     <fragment
         android:id="@+id/gameFragment"
@@ -29,11 +28,23 @@
         android:name="com.example.adv160421148week2.ResultFragment"
         android:label="fragment_result"
         tools:layout="@layout/fragment_result" >
-        <action
-            android:id="@+id/actionMainFragment"
-            app:destination="@id/mainFragment" />
         <argument
             android:name="score"
             app:argType="integer" />
+        <action
+            android:id="@+id/actionMainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calculatorFragment"
+        android:name="com.example.adv160421148week2.CalculatorFragment"
+        android:label="fragment_calculator"
+        tools:layout="@layout/fragment_calculator" >
+        <action
+            android:id="@+id/actionResultFragment"
+            app:destination="@id/resultFragment" />
+        <argument
+            android:name="player_name"
+            app:argType="string" />
     </fragment>
 </navigation>
